@@ -1,0 +1,79 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title SB Admin 2 - Bootstrap Admin Theme
+    // Bootstrap Core CSS
+    link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
+    // MetisMenu CSS
+    link(href='/stylesheets/metisMenu.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='/stylesheets/sb-admin-2.min.css', rel='stylesheet')
+    // Morris Charts CSS
+    link(href='/stylesheets/morris.css', rel='stylesheet')
+    // Custom Fonts
+    link(href='/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body
+    #wrapper
+      // Navigation
+      nav.navbar.navbar-default.navbar-static-top(role='navigation', style='margin-bottom: 0')
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html') SB Admin v2.0
+        // /.navbar-header
+        .navbar-default.sidebar(role='navigation')
+          .sidebar-nav.navbar-collapse
+            ul#side-menu.nav
+              li
+                a(href='/admin')
+                  i.fa.fa-dashboard.fa-fw
+                  |  Dashboard
+              li
+                a(href='#')
+                  i.fa.fa-files-o.fa-fw
+                  |  Posts
+                  span.fa.arrow
+                ul.nav.nav-second-level
+                  li
+                    a(href='/admin/posts') All posts
+                  li
+                    a(href='/admin/post/create') Add new post
+                // /.nav-second-level
+          // /.sidebar-collapse
+        // /.navbar-static-side
+      #page-wrapper
+        .row
+          .col-lg-12
+            h1.page-header Dashboard
+          // /.col-lg-12
+        // /.row
+        .row
+          .col-lg-3.col-md-6
+            block content
+        // /.row
+      // /#page-wrapper
+    // /#wrapper
+    // jQuery
+    script(src='/javascripts/jquery.min.js')
+    // Bootstrap Core JavaScript
+    script(src='/javascripts/bootstrap.min.js')
+    // Metis Menu Plugin JavaScript
+    script(src='/javascripts/metisMenu.min.js')
+    // Morris Charts JavaScript
+    script(src='/javascripts/raphael.min.js')
+    script(src='/javascripts/morris.min.js')
+    // Custom Theme JavaScript
+    script(src='/javascripts/sb-admin-2.min.js')

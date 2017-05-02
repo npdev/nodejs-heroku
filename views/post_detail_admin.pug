@@ -1,0 +1,13 @@
+extends layout_admin
+
+block content
+  if error && error.length > 0
+    p= 'Error: ' + error
+  else
+    h1= post.title
+    p #{post.content}
+  hr
+  p
+    a(href='/admin'+post.url+'/delete') Delete Post
+  p
+    a(href='/admin'+post.url+'/update') Update Post

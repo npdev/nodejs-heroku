@@ -1,0 +1,13 @@
+extends layout_admin
+
+block content
+  h1= title
+
+  ul
+  each post in postsList
+    li
+      a(href='/admin' + post.url) #{post.title}
+
+
+  else
+    li There are no posts.

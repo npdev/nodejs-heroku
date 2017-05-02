@@ -1,0 +1,16 @@
+extends layout_admin
+
+block content
+  h1= title
+  p Welcome to #[em Блог], a very basic Express website.
+
+  if error
+    p Error getting dynamic content.
+  else
+
+    p Users:
+    ul
+      each user in data
+        li= user.username
+      else
+        li There are no values
