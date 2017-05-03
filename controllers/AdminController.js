@@ -50,8 +50,7 @@ exports.createPostPost = function (req, res, next) {
 
   var post = new models.Post(
           {title: req.body.title,
-            content: req.body.content,
-            author: req.user._id
+            content: req.body.content//,author: req.user._id
           });
 
   console.log('post: ' + post);
